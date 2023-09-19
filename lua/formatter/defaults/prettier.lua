@@ -3,7 +3,7 @@ local util = require "formatter.util"
 return function(parser)
   if not parser then
     return {
-      exe = "prettier",
+      exe = "npx prettier",
       args = {
         "--stdin-filepath",
         util.escape_path(util.get_current_buffer_file_path()),
@@ -14,7 +14,7 @@ return function(parser)
   end
 
   return {
-    exe = "prettier",
+    exe = "npx prettier",
     args = {
       "--stdin-filepath",
       util.escape_path(util.get_current_buffer_file_path()),
